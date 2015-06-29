@@ -23,8 +23,8 @@ macro probe_stap_emit(name, *args)
           .8byte _.stapsdt.base
           .8byte 0
           .asciz \"crystal\"
-          .asciz \" {{ name }} \"
-          .asciz \" {% for x, i in args %} -8@${{i}}{% end %}\\"
+          .asciz \"{{ name }}\"
+          .asciz \"{% for x, i in args %} -8@${{i}}{% end %}\"
   994:    .balign 4
           .popsection
   .ifndef _.stapsdt.base
